@@ -14,7 +14,7 @@ import "swiper/css/free-mode";
 const TopPlay = () => {
   const dispatch = useDispatch();
   const { activeSong, isPlaying } = useSelector((state) => state.player);
-  const { data } = useGetChartsQuery();
+  const { data, isLoading } = useGetChartsQuery();
   const divRef = useRef(null);
 
   const topPlays = data?.tracks.slice(0, 5);
@@ -29,8 +29,10 @@ const TopPlay = () => {
   };
 
   useEffect(() => {
-    divRef.current.scrollIntoView({ behavior: "smooth" });
+    divRef?.current?.scrollIntoView({ behavior: "smooth" });
   });
+
+  if (isLoading) return null;
 
   return (
     <div
