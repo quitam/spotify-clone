@@ -17,7 +17,7 @@ const SongCard = ({ song, activeSong, isPlaying, data, i }) => {
   };
 
   return (
-    <div className="flex flex-col w-[250px] p-4 bg-white/5 bg-opacity-80 backdrop-blur-sm animate-slideup rounded-lg cursor-pointer">
+    <div className="flex flex-col w-[240px] p-4 bg-white/5 bg-opacity-80 backdrop-blur-sm animate-slideup rounded-lg cursor-pointer">
       {/* Images and Pause button */}
       <div className="relative w-full h-56 group">
         <div
